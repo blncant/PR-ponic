@@ -1,4 +1,6 @@
-export const history = [
+//??
+
+export const pedidos = [
 	{
 		id: 1,
 		order: "007",
@@ -6,5 +8,6 @@ export const history = [
 		category: "interior",
 		price: 5000,
 		img: "../assets/img-cart/pexels-alex-staudinger-4596578.jpg",
+		status: "check",
 	},
 ];

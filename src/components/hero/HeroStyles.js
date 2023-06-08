@@ -6,20 +6,21 @@ export const HeroBgStyled = styled.section`
 	width: 100%;
 	background-position: center;
 	margin-top: 4em;
-	animation: bounce 0.9s infinite;
+	/* animation: bounce 0.9s infinite; */
 `;
 
 export const HeroContainerStyled = styled.div`
 	max-width: 1300px;
 	width: 100%;
-	padding: 30% 5%;
+	padding: 10% 10%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: left;
 	gap: 15px;
-	@media (min-width: 40em) {
-		padding: 150px 60px;
+
+	@media (max-width: 30em) {
+		padding: 4rem 2rem;
 	}
 
 	h3 {

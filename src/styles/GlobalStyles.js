@@ -24,6 +24,9 @@ export const GlobalStyles = createGlobalStyle`
 	--fs-btn-media: 1rem;
 }
 
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -36,6 +39,14 @@ export const GlobalStyles = createGlobalStyle`
 	/* outline: 1px solid green; */
 }
 
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 4em;
+    overflow: -moz-scrollbars-none;
+}
+
 ::-webkit-scrollbar {
 	width: 1em;
 }
@@ -46,10 +57,10 @@ export const GlobalStyles = createGlobalStyle`
 	background-color: var(--color-blue);
 }
 
-html {
-	font-size: 100%;
-	scroll-behavior: smooth;
-	scroll-padding-top: 4em;
+@-moz-document url-prefix() { /* Disable scrollbar Firefox */
+    html{
+              scrollbar-width: none;
+            }
 }
 
 body {
@@ -58,5 +69,7 @@ body {
 	align-items: center;
 	background: linear-gradient(to bottom, #8faca7 60%, white) no-repeat;
 }
+
+
 
 `;

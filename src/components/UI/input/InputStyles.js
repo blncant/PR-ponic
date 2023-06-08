@@ -19,7 +19,7 @@ export const InputLabelStyled = styled.label`
 `;
 
 export const InputStyled = styled.input`
-	background-color: var(--gray-bg);
+	background-color: var(--bg-header);
 	outline: none;
 	border: ${({ isError }) => (isError ? "1px solid #fb103d " : "none")};
 	border-radius: 8px;
@@ -37,7 +37,7 @@ export const InputStyled = styled.input`
 	:-webkit-autofill,
 	:-webkit-autofill:hover,
 	:-webkit-autofill:focus {
-		-webkit-box-shadow: 0 0 0px 1000px var(--gray-bg) inset;
+		-webkit-box-shadow: 0 0 0px 1000px var(--bg-header) inset;
 	}
 `;
 

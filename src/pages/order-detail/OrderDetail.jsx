@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { formatPrice } from '../../utils';
 
-import CardMyOrders from '../../components/my-orders/CardMyOrders';
+import OrderDetailCard from '../../components/order-detail/OrderDetailCard';
 import Link from '../../components/UI/link/Link';
 
 import {
@@ -14,11 +14,12 @@ import {
   ResumenContainerStyled,
   ResumenTitleStyled,
 } from './OrderDetailStyles';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getOrders } from '../../axios/axiosOrders';
 
-const OrderDetail = () => {
+const OrderDetail= () => {
   const [visitedOrder, setVisitedOrder] = useState(null);
   const currentUser = useSelector(state => state.user.currentUser)
   const orders = useSelector(state => state.orders.orders)
@@ -36,13 +37,13 @@ const OrderDetail = () => {
     <ResumenContainerStyled>
       <ResumenTitleStyled>
         <h1>Resumen Orden: #{visitedOrder?._id.slice(0, 7)}</h1>
-        <Link borderRadius='20' to='/mis-ordenes'></Link>
+        <Link to='/orders-history'></Link>
       </ResumenTitleStyled>
       <h2>Productos:</h2>
       <ProductsContainerStyled>
         {
           visitedOrder?.items.map(item => (
-            <CardMyOrders key={item._id} {...item} />
+            <OrderDetailCard key={item._id} {...item} />
           ))
         }
       </ProductsContainerStyled>

@@ -7,9 +7,9 @@ import CardsMyOrders from '../../components/my-orders/CardsMyOrders';
 import {
   MisOrdenesBtnContainerStyled,
   MisOrdenesContainerStyled,
-  MisOrdenesPatternStyled,
   MisOrdenesTitleStyled,
 } from './OrdersHistoryStyles';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { getOrders } from '../../axios/axiosOrders';
 import { clearError, fetchOrdersFail } from '../../redux/orders/ordersSlice';
@@ -34,16 +34,12 @@ const OrdersHistory = () => {
   return (
     <>
       <MisOrdenesContainerStyled>
-        <MisOrdenesTitleStyled>Mis órdenes</MisOrdenesTitleStyled>
+        <MisOrdenesTitleStyled>Mis pedidos</MisOrdenesTitleStyled>
         <CardsMyOrders />
         <MisOrdenesBtnContainerStyled>
           <Button onClick={() => navigate('/')}>Volver a comprar</Button>
         </MisOrdenesBtnContainerStyled>
       </MisOrdenesContainerStyled>
-      <MisOrdenesPatternStyled
-        src='https://res.cloudinary.com/dcatzxqqf/image/upload/v1656648434/coding/NucbaZappi/Assets/Pattern_lt5uru.png'
-        alt=''
-      />
     </>
   );
 };

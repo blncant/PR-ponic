@@ -5,6 +5,7 @@ const Link = ({ to = '/' }) => {
   return (
     <ContainerLinkStyled>
       <StyledLink to={to}>
+        <span> Ir al Home </span>
 
       </StyledLink>
     </ContainerLinkStyled>

@@ -4,9 +4,9 @@ export const ButtonSubmitStyled = styled.button`
 	padding: 0.8rem 1.5rem;
 	outline: none;
 	border: none;
-	border-radius: 10px;
+
 	background: var(--btn-gradient);
-	color: white;
+	color: var(--color-green-dark);
 	text-transform: uppercase;
 	font-weight: 400;
 	cursor: pointer;

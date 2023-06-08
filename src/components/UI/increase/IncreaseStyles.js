@@ -4,9 +4,9 @@ export const IncreaseStyled = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 40px;
-	height: 40px;
-	background: ${({ bgColor }) => bgColor || "var(--btn-gradient)"};
+	width: 30px;
+	height: 30px;
+	background: var(--color-green-dark);
 	border: none;
 	border-radius: 15px;
 	font-size: 1.1rem;

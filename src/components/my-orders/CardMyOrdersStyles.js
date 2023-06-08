@@ -8,12 +8,13 @@ export const OrdersContainerStyled = styled.div`
 	gap: 20px;
 	max-width: 1500px;
 	margin: 0 auto;
+	margin-top: 200px;
+	color: white;
 `;
 
 export const PedidoContainerStyled = styled.div`
-	background: var(--gray-bg);
 	width: 380px;
-	border-radius: 15px;
+
 	padding: 1rem 1.4rem;
 	display: flex;
 	align-items: center;
@@ -34,15 +35,12 @@ export const TitleStyled = styled.h2`
 
 export const IdStyled = styled.p`
 	font-size: 1rem;
-	color: #666;
+	color: white;
 `;
 
 export const PriceStyled = styled.p`
 	font-weight: 800;
 	font-size: 2rem;
-	background: var(--btn-gradient);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: white;
 	margin: 0;
 `;

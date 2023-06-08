@@ -20,7 +20,7 @@ const CardsMyOrders = () => {
         orders?.length ? (
           orders.map(order => <CardMyOrders key={order._id} {...order} />)
         ): (
-          <h2>Que esperas para hacer tu primer pedido?!</h2>
+          <h2>Aun no tenes pedidos!</h2>
         )
       }
     </OrdersContainerStyled>

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+//HEADER
 export const NavbarContainerStyled = styled.header`
 	background-color: var(--bg-header);
 	box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
@@ -30,10 +31,12 @@ export const NavbarContainerStyled = styled.header`
 	}
 `;
 
+//LOGO
 export const Logo = styled.img`
 	height: 40px;
 `;
 
+//NAVBAR
 export const LinksContainerStyled = styled.nav`
 	color: white;
 	display: flex;
@@ -41,69 +44,43 @@ export const LinksContainerStyled = styled.nav`
 	align-items: center;
 	gap: 40px;
 
-	svg {
-		font-size: 25px;
-		display: block;
-		color: white;
-		cursor: pointer;
-	}
-
-	a {
+	span {
 		padding: 1rem 1.5 rem;
 		font-size: 14px;
 		color: white;
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 		text-shadow: 1px 1px 5px var(--color-green-dark);
+
+		&:hover {
+			color: var(--color-blue);
+			font-weight: 600;
+		}
 	}
 `;
 
-// Para que sirve?
-export const LinkContainerStyled = styled.div`
-	font-size: 1.2rem;
-	color: ${(props) => (props.home ? "#ff9d01" : "#ff9300")};
-`;
-
-export const UserContainerStyled = styled(LinkContainerStyled)`
-	display: flex;
-	align-items: center;
-`;
-
-export const NavItemStyled = styled(LinkContainerStyled)`
+//MENU (HOME)
+export const MenuNavStyled = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 30px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 30em) {
 		display: none;
 	}
 `;
 
-// OVERLAY
-export const ModalOverlayStyled = styled.div`
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 50;
-	width: calc(100vw - 450px);
-	height: 100vh;
-
-	${({ isHidden }) =>
-		!isHidden &&
-		css`
-			backdrop-filter: blur(4px);
-		`}
-`;
-
-// NOMBRE USUARIO
+// USUARIO
 export const UserNavStyled = styled.div`
 	gap: 15px;
 	cursor: pointer;
 
 	span {
-		color: white;
-		font-size: 1rem;
-		margin-right: 20px;
+		margin-right: 15px;
+
+		@media (max-width: 30em) {
+			display: none;
+		}
 	}
 `;
 
@@ -113,18 +90,50 @@ export const CartNavStyled = styled.div`
 	cursor: pointer;
 
 	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		position: absolute;
 		top: 0;
 		margin-left: 15px;
 
-		height: 20px;
-		width: 20px;
+		height: 18px;
+		width: 18px;
 		text-align: center;
 
 		border-radius: 1rem;
-		border: 1px solid white;
+		background: var(--color-green-dark);
 		color: white;
-		background-color: var(--color-green-dark);
-		font-size: 0.9rem;
+		font-size: 0.7rem;
+		padding-left: 1px;
 	}
+`;
+
+export const LinkContainerStyled = styled.div`
+	/* color: ${(props) => (props.home ? "red" : "")}; */
+	display: flex;
+	align-items: center;
+
+	svg {
+		font-size: 25px;
+		display: block;
+		cursor: pointer;
+	}
+`;
+
+// OVERLAY
+export const ModalOverlayStyled = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100vw;
+	height: 100vh;
+
+	${({ isHidden }) =>
+		!isHidden &&
+		css`
+			backdrop-filter: blur(4px);
+		`}
 `;

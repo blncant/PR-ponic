@@ -36,7 +36,8 @@ const CheckoutForm = ({ cartItems, shippingCost, price }) => {
 
           try {
             await createOrder(orderData, dispatch, currentUser);
-            navigate('/felicitaciones');
+            navigate('/');
+            alert("Pedido realizado")
             dispatch(clearCart());
           } catch (error) {
             alert('Oops, algo salió mal al crear la orden');

@@ -18,6 +18,7 @@ export const CardsWrapperStyled = styled.div`
 	width: 80%;
 	height: 440px;
 	margin: 0 auto;
+	margin-top: 20px;
 
 	overflow: scroll;
 
@@ -64,7 +65,7 @@ export const EnvioStyled = styled(SubtotalStyled)``;
 export const TotalStyled = styled(SubtotalStyled)``;
 
 export const PriceTotalStyled = styled.span`
-	color: #ff7a00;
+	color: white;
 	font-weight: 800;
 	font-size: 1.3rem;
 `;

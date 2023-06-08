@@ -6,9 +6,10 @@ export const ForgotContainerStyled = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 20px;
+	gap: 30px;
 	margin-top: 20px;
 	height: calc(100vh - 400px);
+	color: white;
 `;
 
 export const Form = styled(FormikForm)`
@@ -16,13 +17,19 @@ export const Form = styled(FormikForm)`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0 2rem;
+	padding: 2rem;
 	gap: 20px;
+
+	button {
+		display: flex;
+		align-items: center;
+	}
 `;
 
 export const ForgotEmailStyled = styled.p`
 	color: var(--orange);
 	cursor: pointer;
+	padding: 20px 0;
 
 	:hover {
 		text-decoration: underline;

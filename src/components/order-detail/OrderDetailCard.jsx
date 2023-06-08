@@ -8,17 +8,17 @@ import {
   PriceContainerStyled,
 } from './OrderDetailCardStyles';
 
-const OrderDetailCard = ({ img, title, desc, quantity, price}) => {
+const OrderDetailCard = ({ imgCard, name, quantity, price}) => {
   return (
     <ProductStyled>
       <ProductLeftStyled>
         <img
-          src={img}
-          alt={title}
+          src={imgCard}
+          alt={name}
         />
         <div>
-          <h3>{title}</h3>
-          <p>{desc}</p>
+          <h3>{name}</h3>
+          
         </div>
       </ProductLeftStyled>
       <PriceContainerStyled>

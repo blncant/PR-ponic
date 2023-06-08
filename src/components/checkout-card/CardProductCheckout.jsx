@@ -1,6 +1,6 @@
 import { formatPrice } from '../../utils/formatPrice';
 
-import { BsPlusLg } from 'react-icons/bs';
+import { FaPlus } from 'react-icons/fa';
 import { FaMinus } from 'react-icons/fa';
 
 import Count from '../UI/count/Count';
@@ -38,7 +38,7 @@ const CardProductCheckout = ({ cartImg, name, price, quantity, id }) => {
         </Increase>
         <Count>{quantity}</Count>
         <Increase onClick={() => dispatch(addToCart({ cartImg, name, price, quantity, id }))}>
-          <BsPlusLg />
+          <FaPlus />
         </Increase>
       </QuantityContainerStyled>
     </CardContainerStyled>

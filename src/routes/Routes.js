@@ -18,8 +18,8 @@ function Routes() {
 			<Route path="/login" element={<Login />} />
 			<Route path="/register" element={<Register />} />
 			<Route path="/forgot-password" element={<ForgotPassword />} />
-			<Route path="/order-detail" element={<OrderDetail />} />
-			<Route path="/orders-history/:orderId" element={<OrdersHistory />} />
+			<Route path="/orders-history" element={<OrdersHistory />} />
+			<Route path="/order-detail/:orderId" element={<OrderDetail />} />
 
 			<Route
 				path="/checkout"

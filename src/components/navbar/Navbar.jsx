@@ -6,11 +6,11 @@ import { toggleHiddenMenu } from '../../redux/user/userSlice';
 
 import { 
     Logo, 
-    NavItemStyled, 
+    MenuNavStyled, 
     LinksContainerStyled, 
     NavbarContainerStyled, 
     UserNavStyled, 
-    UserContainerStyled, 
+
     LinkContainerStyled, 
     CartNavStyled 
 } from './NavbarStyles'
@@ -48,13 +48,14 @@ function Navbar() {
 
         <LinksContainerStyled>
             {/* Home */}
-            <NavItemStyled>
+            <MenuNavStyled>
                 <Link to="/" onClick={scrollToTop}>
-                    <LinkContainerStyled home>
+                    <LinkContainerStyled>
+                        <span>Home</span>
                     </LinkContainerStyled> 
-                    Home
+                    
                 </Link>
-            </NavItemStyled>
+            </MenuNavStyled>
 
             {/* Cart */}
             <CartNavStyled>
@@ -63,7 +64,7 @@ function Navbar() {
 
             {/* User */}
             <UserNavStyled>
-                <UserContainerStyled 
+                <LinkContainerStyled 
                     onClick={() => 
                     currentUser ? dispatch(toggleHiddenMenu()) : navigate('/register')
                 }>
@@ -71,7 +72,7 @@ function Navbar() {
                         {currentUser ? `${currentUser.nombre}` : 'Sign In'}
                     </span>
                     <FaUserCircle/>
-                </UserContainerStyled>
+                </LinkContainerStyled>
             </UserNavStyled>
         
         </LinksContainerStyled>

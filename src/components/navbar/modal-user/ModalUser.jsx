@@ -26,7 +26,7 @@ const ModalUser = () => {
         >
           <UsernameStyled>{`Hola ${currentUser?.nombre}`}</UsernameStyled>
           <HrStyled />
-          <LinkStyled to='/orders-history'>Mis Ordenes</LinkStyled>
+          <LinkStyled to='/orders-history'>Mis pedidos</LinkStyled>
           <span onClick={() => {
             dispatch(setCurrentUser(null));
             dispatch(toggleHiddenMenu())

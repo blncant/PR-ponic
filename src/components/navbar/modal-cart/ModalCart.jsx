@@ -1,18 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { MdOutlineClose } from 'react-icons/md';
-import { IoMdTrash } from 'react-icons/io';
 
+
+import {FaWindowClose} from 'react-icons/fa'
 
 import Submit from '../../UI/submit/Submit';
-import Increase from '../../UI/increase/Increase';
 import ModalCartCard from './ModalCartCard';
 
 import {
   ButtonContainerStyled,
   MainContainerStyled,
-  CloseButtonContainerStyled,
   CloseButtonStyled,
   ContainerStyled,
   EnvioStyled,
@@ -61,25 +59,19 @@ const ModalCart = () => {
             transition={{ type: 'spring', damping: 27 }}
             key='cart-modal'
           >
-            <CloseButtonContainerStyled>
+          
               <CloseButtonStyled
                 className='close__modal '
                 onClick={() => dispatch(toggleHiddenCart())}
               >
-                <MdOutlineClose size='24px' />
+                <FaWindowClose size='30px' />
               </CloseButtonStyled>
-            </CloseButtonContainerStyled>
+            
 
             <MainContainerStyled>
               <TitleStyled>
                 <h1>Tus Productos</h1>
-                <Increase
-                  onClick={e => e.preventDefault()}
-                  bgColor='var(--magenta)'
-                  disabled='true'
-                >
-                  <IoMdTrash />
-                </Increase>
+        
               </TitleStyled>
 
               <ProductsWrapperStyled>

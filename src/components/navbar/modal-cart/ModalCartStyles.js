@@ -15,16 +15,26 @@ export const ContainerStyled = styled.div`
 	height: calc(100vh - 4rem);
 
 	padding: 2rem;
-	background-color: var(--gray-bg);
-	border-radius: 0 0 0 1rem;
+	background-color: hsla(176, 82%, 34%, 0.9);
+	color: white;
 	box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+
+	//TABLET
+	@media (max-width: 40em) {
+		width: 70%;
+	}
+
+	//MOBILE
+	@media (max-width: 30em) {
+		width: 100%;
+	}
 `;
 
 export const CloseButtonContainerStyled = styled.div`
 	height: 32px;
 `;
 
-export const CloseButtonStyled = styled.button`
+export const CloseButtonStyled = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,8 +43,8 @@ export const CloseButtonStyled = styled.button`
 	outline: none;
 	border: none;
 	border-radius: 10px;
-	background: var(--btn-gradient);
-	color: white;
+
+	color: var(--color-orange);
 	cursor: pointer;
 `;
 
@@ -44,8 +54,9 @@ export const TitleStyled = styled.div`
 	align-items: flex-start;
 	margin: 0 0 2rem 0;
 
-	& h1 {
+	h1 {
 		margin-top: 0;
+		font-size: 30px;
 	}
 `;
 
@@ -68,7 +79,15 @@ export const ProductsWrapperStyled = styled.div`
 
 	overflow: scroll;
 
+	scrollbar-width: none; /* Also needed to disable scrollbar Firefox */
+	-ms-overflow-style: none; /* Disable scrollbar IE 10+ */
+	overflow-y: scroll;
+
 	&::-webkit-scrollbar {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
 
@@ -88,8 +107,6 @@ export const ProductContainerStyled = styled.div`
 	gap: 15px;
 	width: 360px;
 
-	background: var(--gray-bg);
-	box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
 	padding: 1rem;
 	border-radius: 15px;
 
@@ -117,25 +134,26 @@ export const CardTitleStyled = styled.h3`
 
 export const TextStyled = styled.p`
 	margin: 0;
-	color: #666;
+	color: white;
 	font-size: 1rem;
 `;
 
 export const PriceStyled = styled.span`
 	font-weight: 800;
 	font-size: 1.2rem;
-	background: var(--btn-gradient);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 `;
 
 export const PriceContainerStyled = styled.div`
 	z-index: 1000;
-	background-color: var(--gray-bg);
+
 	& p {
 		text-align: center;
 		margin-bottom: 0;
+	}
+
+	hr {
+		color: white;
+		margin-top: 20px;
 	}
 `;
 
@@ -147,7 +165,9 @@ export const SubtotalStyled = styled.div`
 
 export const EnvioStyled = styled(SubtotalStyled)``;
 
-export const TotalStyled = styled(SubtotalStyled)``;
+export const TotalStyled = styled(SubtotalStyled)`
+	margin: 10px;
+`;
 
 export const ButtonContainerStyled = styled(SubtotalStyled)`
 	justify-content: center;
@@ -156,4 +176,8 @@ export const ButtonContainerStyled = styled(SubtotalStyled)`
 export const QuantityContainerStyled = styled.div`
 	display: flex;
 	align-items: center;
+	span {
+		color: white;
+		margin: 5px;
+	}
 `;

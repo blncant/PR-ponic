@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 
 export const ModalContainerStyled = styled.div`
 	position: absolute;
-	background-color: var(--gray-bg);
-	box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+	background-color: var(--clr--card-text);
+	color: white;
 	width: 450px;
 	top: 100px;
 	right: 0;
 	z-index: 98;
-	border-radius: 1rem 0 0 1rem;
 	padding: 2rem;
 
 	& span {
@@ -25,6 +24,7 @@ export const ModalContainerStyled = styled.div`
 `;
 
 export const LinkStyled = styled(Link)`
+	color: white;
 	&:hover {
 		opacity: 90%;
 	}

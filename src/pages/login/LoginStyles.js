@@ -7,7 +7,8 @@ export const LoginContainerStyled = styled.div`
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
-	margin-top: 20px;
+	margin-top: 200px;
+	color: white;
 `;
 
 export const Form = styled(FormikForm)`
@@ -22,7 +23,7 @@ export const Form = styled(FormikForm)`
 export const LoginPasswordStyled = styled.p`
 	margin: 0;
 
-	color: var(--magenta);
+	color: white;
 
 	:hover {
 		text-decoration: underline;
@@ -45,7 +46,7 @@ export const LoginButtonGoogleStyled = styled.button`
 `;
 
 export const LoginEmailStyled = styled.p`
-	color: var(--orange);
+	color: white;
 
 	:hover {
 		text-decoration: underline;

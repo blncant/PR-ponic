@@ -9,9 +9,10 @@ export const LoginInputStyled = styled.input`
 	width: 300px;
 	padding: 1.5rem 2rem;
 	color: white;
-	background-color: var(--gray-bg);
+	background: var(--bg-header);
+
 	border-radius: 15px;
-	border: ${({ isError }) => (isError ? "1px solid #fb103d " : "none")};
+	border: ${({ isError }) => (isError ? "1px solid #fb103d " : "1px solid white")};
 	outline: none;
 	caret-color: white;
 
@@ -23,7 +24,7 @@ export const LoginInputStyled = styled.input`
 	:-webkit-autofill,
 	:-webkit-autofill:hover,
 	:-webkit-autofill:focus {
-		-webkit-box-shadow: 0 0 0px 1000px var(--gray-bg) inset;
+		-webkit-box-shadow: 0 0 0px 1000px var(--bg-header) inset;
 	}
 `;
 

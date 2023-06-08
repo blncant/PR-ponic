@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const HomeWrapper = styled.main`
-	width: 90vw;
-	max-width: 1600px;
-	padding: 2rem;
-	margin: 0 auto;
-	/* h2 {
-		font-weight: 400;
-	} */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
 `;
 
 export const CategoriasWrapper = styled.section`
@@ -15,9 +13,9 @@ export const CategoriasWrapper = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
+	padding: 2rem;
 	max-width: 1300px;
-	margin: 4rem auto;
+	margin: 0 auto;
 	width: 100%;
 	text-align: center;
 
@@ -55,4 +53,6 @@ export const ProductosWrapper = styled.section`
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
+
+	padding: 2rem;
 `;
