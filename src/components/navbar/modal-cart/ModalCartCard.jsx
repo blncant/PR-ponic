@@ -19,17 +19,17 @@ import { FaMinus } from 'react-icons/fa';
 import Increase from '../../UI/increase/Increase';
 import Count from '../../UI/count/Count';
 
-const ModalCartCard = ({ cartImg, name, price, quantity, id }) => {
+const ModalCartCard = ({ img, title, price, quantity, id }) => {
   const dispatch = useDispatch()
 
   return (
     <ProductContainerStyled>
       <img
-        src={cartImg}
-        alt={name}
+        src={img}
+        alt={title}
       />
       <TextContainerStyled>
-        <CardTitleStyled>{name}</CardTitleStyled>
+        <CardTitleStyled>{title}</CardTitleStyled>
         <PriceStyled>{formatPrice(price)}</PriceStyled>
       </TextContainerStyled>
       <QuantityContainerStyled>
@@ -41,7 +41,7 @@ const ModalCartCard = ({ cartImg, name, price, quantity, id }) => {
         {quantity}
         </Count>
         
-        <Increase onClick={() => dispatch(addToCart({ cartImg, name, price, quantity, id }))}>
+        <Increase onClick={() => dispatch(addToCart({ img, title, price, quantity, id }))}>
           <FaPlus />
         </Increase>
       </QuantityContainerStyled>
